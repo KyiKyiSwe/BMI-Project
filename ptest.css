@@ -1,0 +1,73 @@
+/*#first-element,#third-element{
+position: relative;
+top: 130px;
+left: 50px;
+
+	width: 300px;
+	border: 2px solid blue;
+	font-size: 24px;
+	text-align: center;
+
+}
+#second-element,#fourth-element{
+	width: 300px;
+	border: 2px solid blue;
+	font-size: 24px;
+	text-align: center;
+}
+#count{
+	width: 100px;
+	height: 50px;
+	background-color: pink;
+	padding: 10px;
+	border-radius: 30%
+	position:relative;
+	left: 300px;
+}
+#count4{
+	position: absolute;
+	top: 20px;
+	left: 100px;
+		width: 100px;
+	height: 50px;
+	background-color: pink;
+	padding: 10px;
+	border-radius: 30%
+}
+div.fixed{
+	width: 300px;
+	background-color: skyblue;
+	position: fixed;
+	top: 10px;
+	left: 50%
+}*/
+
+/*Grid test*/
+.gridone,.gridtwo,.gridthree, .gridfour,.gridfive{
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+.gridone div,.gridtwo div, .gridthree div, .gridfour div, .gridfive div{
+	border: 2px solid red;
+	border-radius: 10px;
+	font-size: 20px;
+	text-align: center;
+	color: blue;
+}
+.gridtwo{
+	grid-column-gap: 50px;
+}
+.gridthree{
+	grid-row-gap: 50px;
+}
+.gridfour{
+	grid-gap: 30px;
+}
+.gridfive div.row-one{
+	grid-row-start-start: 1;
+	grid-row-end-end: 3;
+
+}
+p:empty{
+	background-color: red;
+}

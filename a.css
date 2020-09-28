@@ -1,0 +1,18 @@
+Flex Exercise
+div img{
+	width: 20%;
+	height: 10%
+}
+
+.flexone,.flextwo,.flexthree,.flexfour{
+	display: flex;
+}
+
+.flexone i,.flextwo i,.flexthree i,.flexfour i{
+	color;#fff;
+	font-size: 30px;
+	padding: 200px;
+	text-align: left;
+	
+	margin: 100;
+}

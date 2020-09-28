@@ -1,0 +1,229 @@
+p{
+	line-height: 50px;
+}
+
+*{
+	background-color: #EEEEEE;
+	/*line-height: 35px;*/
+
+}
+
+a[title="Google"],
+a[title="Facebook"]{
+	text-decoration: none;
+	color: green;
+}
+
+#id_selector{
+	text-align: justify;
+	word-spacing: 20px;
+}
+
+.class_selector_One{
+	color: darkred;
+	text-transform: uppercase;
+}
+
+.class_selector_Two{
+	column-count: 2;
+}
+/*Descendant Selector*/
+p a{
+	color: purple;
+	text-decoration-line: overline;
+	text-decoration-style: double;
+	text-transform: lowercase;
+}
+/*Child Selector*/
+p>a{
+	text-decoration-style: wavy;
+	color: darkred;
+	text-transform: uppercase;
+}
+
+
+a.gitHub:link{
+	text-decoration: none;
+}
+a.gitHub:hover{
+	text-decoration: none;
+	background-color: black;
+	color: white;
+}
+a.gitHub:active{
+	background-color: silver;
+	color: black;
+}
+a.gitHub:visited{
+	color: gray;
+}
+
+:target{
+	background: skyblue;
+	border: 2px solid black;
+}
+
+form{
+	width: 80%;
+	margin: auto;
+}
+
+
+input[type="text"], input[type="email"], input[type="number"]{
+	width: 100%;
+	border: 3px solid #ccc;
+	transition: 0.5s;
+  	outline: none; /*default custom blue border ko hide pay tr*/
+}
+
+
+#dob_select{
+	width: 90%;
+  	background-color: #EEEEEE;
+  	border-radius: 4px;
+  	outline: none;
+  	margin: auto;
+}
+
+div#dob_select select{
+	width: 30%;
+	outline: none;
+}
+
+
+textarea#address{
+	width: 100%;
+  	height: 100px;
+  	border: 2px solid #ccc;
+  	border-radius: 4px;
+  	background-color: #f8f8f8;
+  	outline: none;
+}
+
+div.office_div{
+	columns: 3;
+}
+
+
+input[type="text"]:focus{
+	border: 3px solid #555;
+}
+
+
+input[type="radio"]:checked+label{
+	color: purple;
+	font-weight: bold;
+}
+
+input[type="checkbox"]:disabled+label{
+	color: #aaa;
+	font-style: italic;
+}
+
+input[type="checkbox"]:enabled+label{
+	color: #607D8B;
+	font-style: italic;
+}
+
+input[type="checkbox"]:checked+label{
+	color: red;
+	font-style: normal;
+}
+
+
+input[type="text"]:read-only{
+	border: 0;
+	box-shadow: none;
+	background-color: #EEEEEE;
+}
+
+input[type="text"]:read-write{
+	background: pink;
+}
+
+p:empty{
+	width: 100%;
+	height: 40px;
+	background: #607D8B;
+}
+
+li:first-child{
+	background-color: yellow;
+}
+
+li:last-child{
+	background-color: #00BCD4;
+}
+
+li:nth-child(3){
+	background-color: #009688;
+}
+
+li:nth-child(5){
+	background-color: skyblue;
+}
+
+
+
+
+
+/*
+
+
+Flex Exercise
+div img{
+	width: 20%;
+	height: 10%
+}
+
+.flexone,.flextwo,.flexthree,.flexfour{
+	display: flex;
+}
+
+.flexone i,.flextwo i,.flexthree i,.flexfour i{
+	color;#fff;
+	font-size: 30px;
+	padding: 20px;
+	text-align: left;
+	
+	margin: 0;
+}
+div.float_left img{
+	float: left;
+}
+.clear{
+	clear: both;
+}
+
+div.float_right img{
+	float: right;
+}
+.flexone,.flextwo,.flexthree,.flexfour{
+	display: flex;
+}
+.flexone div,.flextwo div,.flexthree div,.flexfour div{
+	color: #fff;
+	font-size: 30px;
+	padding: 20px;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	margin: 0 10 px;
+}
+.flexone,.flextwo,.flexthree,.flexfour{
+	flex: 1;
+}
+
+.flextwo div:nth-child(3)
+{
+	/*length of a flexivle item*/
+	flex-basis: 200px;
+}
+.flexthree div:nth-child(2)
+{
+	/*flex-grow-> item will grow to the rest of flexible items*/
+	flex-grow: 3;
+}
+.flexfour{
+	flex-direction: column-reverse;
+}*/

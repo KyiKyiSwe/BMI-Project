@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script</title>
+	<script type="text/javascript">
+		var name="Mg Mg"; //declare var
+		console.log(typeof name);
+		console.log(name);
+
+		let num1=5;
+		let num2=10;
+		let num3="20";
+		let sum=num1 + num2;
+		let total= num1+num2+num3;
+		console.log("Number1= "+num1);
+		console.log("NUmber2 ="+num2);
+		console.log("sum for num1 and num2= "+sum);// including string
+		console.log("NUmber3 ="+num3);
+		console.log("total for all= "+total);
+
+		total=num1+num2+parseInt(num3);// change to integer from string
+		console.log("total is "+total); 
+
+		const celebration="Thingyan Festival"; // const can not reassign;
+		const dateofThingyan="April";
+		const all=celebration+" in " +dateofThingyan;
+		alert(all);
+
+		var months=["January", "February", "March", "April", "May", "June", "July", "August"];
+		console.log(months); //output array
+		console.log(months.length); //print array length
+		console.log(months[0]); //print in array index:0
+		console.log(months[4]);// print in array index:4
+		months.push("September","November","December");//add septemberinto array
+		console.log(months);
+		months.pop();// remove from array
+		console.log(months);
+
+		months.reverse();
+		console.log("reverse months :"+months)
+
+		for(var i=0;i<months.length;i++){
+			console.log("months"+[i] +" = " +months[i]);
+		}
+		let date=[1,2,3];  
+		console.log(date);
+		
+	// Using object
+	var student={
+		name:"Julia",
+		Age:"22",
+		Address:"Mandalay",
+	};
+	console.log(student); //print all object
+	console.log(student.Address); // print address
+
+	function area(width, height){  //using function to calculate area
+		return width*height;
+	}
+	let Resultarea=area(5,10);  // call function area
+	console.log(Resultarea);    //print the result of function area
+
+	if (Resultarea>60){
+		console.log("greater than 60");
+	}else
+	console.log("less than 60");
+
+	//while loops
+	const list=['a','b','c'];
+	var j=0;
+	while(j<list.length){
+		console.log(list[j] )
+		console.log(j);
+		j=j+1;
+	}
+
+	//do while loops (always execute at least once)
+	const list1=['a','b','c'];
+	var i=0;
+	do{
+	console.log(list1[i]);
+	console.log(i);
+	i=i+1;
+	}while(i<list.length)
+
+	// //for ..of loop
+	for(value of months){
+	console.log(value);
+	}
+
+	let a=1*2+5/2%2;
+	console.log(a);
+
+	// var a=0;
+	// var b= true;
+	// if(typeof(a)=="undefined" || typeof(b)=="undefined"){
+	// 	document.write("Variable a or b is undefined");
+	// }
+	// else if(!a && b){
+	// 	document.write("a==0 ;  b== true;");
+	// }
+	// else{
+	// 	document.write("a==" + a + "; b==" + b + ";");
+	// }
+	</script>
+</head>
+<body>
+
+</body>
+</html>

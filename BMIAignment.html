@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI ASSIGNMENT</title>
+	<link rel="stylesheet" type="text/css" href="bmiexe.css">
+	
+	<script type="text/javascript">
+
+	function ComputeBMI(){
+
+		var HumanHeightfeet = parseInt(document.myform.num1.value);
+		var changeval = parseInt(HumanHeightfeet* 12); //calcualte inches from feet
+		var HumanHeightinches = parseInt(document.myform.num2.value);
+		console.log(HumanHeightinches);
+
+		var sumheight = parseInt(changeval+HumanHeightinches);
+		console.log(sumheight);
+
+		var HumanWeightpounds = parseInt(document.myform.num3.value);
+		var result = parseInt((HumanWeightpounds * 703)/ (sumheight ** 2));
+		console.log(result);
+
+		// document.myform.num4.value = result;
+		
+		if (result<18.5) {
+			alert('Underweight');
+		}else if(result>=18.5 && result<=24.9){
+			alert('Normalweight');
+		}else if (result>=25 && result<=29.9) {
+			alert('Overweight');
+		}else {
+			alert('Obesity');
+		}
+	}
+	</script>
+	
+</head>
+<body>
+
+<form name="myform" id="form">
+
+<div id="cal-part">	
+
+		<img src="bmi1.png">
+	<div class="show-parts">
+		<label>Your Height:</label>
+		<input type="number" name="num1" id="h1" placeholder="feet">
+		<input type="number" name="num2" id="h2" placeholder="inches"><br>
+	
+		<label for="w1">Your weight:</label>
+		<input type="number" name="num3" id="w1" placeholder="pounds"><br>
+		
+	</div>
+	<div class="compute-part">
+		<button onclick="ComputeBMI()" type="button" > Calculate BMI</button>
+	</div>	
+</div>
+	</form>
+
+</body>
+</html>

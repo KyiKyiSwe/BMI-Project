@@ -1,0 +1,23 @@
+input[type="text"]:focus{
+	border: 3px solid #555;
+}
+input[type="radio"]:checked+label{
+	color: red;
+	font-weight: bold;
+}
+
+input[type="checkbox"]:disabled+label{
+	color: #aaa;
+	font-style: italic;
+}
+input[type="checkbox"]:enabled+label{
+	color: #607D8B;
+	font-style: italic;
+}
+input[type="text"]:read-only {
+	border: 0;
+	box-shadow: none;
+}
+input[type="text"]:read-write{
+	background-color: pink;
+}
