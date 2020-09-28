@@ -9,7 +9,7 @@
 	function ComputeBMI(){
 
 		var HumanHeightfeet = parseInt(document.myform.num1.value);
-		var changeval = parseInt(HumanHeightfeet* 12); //calcualte inches from feet
+		var changeval = parseInt(HumanHeightfeet * 12); //calcualte inches from feet
 		var HumanHeightinches = parseInt(document.myform.num2.value);
 		console.log(HumanHeightinches);
 
@@ -23,11 +23,11 @@
 		// document.myform.num4.value = result;
 		
 		if (result<18.5) {
-			alert('Underweight');
+			alert('Under weight');
 		}else if(result>=18.5 && result<=24.9){
-			alert('Normalweight');
+			alert('Normal weight');
 		}else if (result>=25 && result<=29.9) {
-			alert('Overweight');
+			alert('Over weight');
 		}else {
 			alert('Obesity');
 		}
@@ -46,6 +46,7 @@
 		<label>Your Height:</label>
 		<input type="number" name="num1" id="h1" placeholder="feet">
 		<input type="number" name="num2" id="h2" placeholder="inches"><br>
+
 	
 		<label for="w1">Your weight:</label>
 		<input type="number" name="num3" id="w1" placeholder="pounds"><br>

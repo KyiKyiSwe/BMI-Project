@@ -1,26 +1,39 @@
+
+
+
 div#cal-part img{
-	width: 40%;
+	width: 50%;
 	height: 30%;
-	padding: 0 25%;
 }
 #cal-part .show-parts{
-	line-height: 40px;
+	line-height: 50px;
+	width: 50%;
 	font-family: monotype corsiva;
 	color: blue;
 	font-size: 25px;
-	padding: 0 30%;
+	/*padding: 30px;*/
+
+	/*padding: 0 30%;*/
 } 
 
 #cal-part .compute-part{
 	padding-top: 20px;
-	padding-left: 45%;
+	/*padding-left: 45%;*/
 }
 #cal-part .compute-part button{
-	color: #FFFFFF;
-	background-color:blue;
-	border-radius: 5px;
+	
 	font-family: century;
-	font-size: 15px;
+	 background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  width: 40%;
+  margin: 4px 2px;
 }
 
 
