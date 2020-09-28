@@ -11,14 +11,14 @@
 		var HumanHeightfeet = parseInt(document.myform.num1.value);
 		var changeval = parseInt(HumanHeightfeet* 12); //calcualte inches from feet
 		var HumanHeightinches = parseInt(document.myform.num2.value);
-		console.log(HumanHeightinches);
+		//console.log(HumanHeightinches);
 
 		var sumheight = parseInt(changeval+HumanHeightinches);
-		console.log(sumheight);
+		//console.log(sumheight);
 
 		var HumanWeightpounds = parseInt(document.myform.num3.value);
 		var result = parseInt((HumanWeightpounds * 703)/ (sumheight ** 2));
-		console.log(result);
+		//console.log(result);
 
 		// document.myform.num4.value = result;
 		
@@ -43,9 +43,9 @@
 
 		<img src="bmi1.png">
 	<div class="show-parts">
-		<label>Your Height:</label>
+		<label for="h1">Your Height:</label>
 		<input type="number" name="num1" id="h1" placeholder="feet">
-		<input type="number" name="num2" id="h2" placeholder="inches"><br>
+		<input type="number" name="num2" id="h1" placeholder="inches"><br>
 	
 		<label for="w1">Your weight:</label>
 		<input type="number" name="num3" id="w1" placeholder="pounds"><br>
