@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
+	<title>	Hello Tax</title>
 		<script type="text/javascript">
 			function caltax(){
 				
@@ -14,14 +14,14 @@
 				let netearning = 0;
 				var taxeachmonth;
 
-				let sal = parseInt(document.getElementById('s1')).value; //take data form textbox
-				//console.log(sal);
+				let sal = parseInt(document.getElementById('s1').value); //take data form textbox
+				console.log(sal);
 
-				let month = parseInt(document.getElementById('s2')).value; // take month from text box
-				//console.log(month);
+				let month = parseInt(document.getElementById('s2').value); // take month from text box
+				console.log(month);
 
 				let totlsal = sal * month; // total salry for 12 months
-				//console.log(totlsal);
+				console.log(totlsal);
 
 				if(totlsal<=10000000){ // if your sal is less than 10000000 then 20% of sal else 20% of 10000000
 					percentded += 0.2 * totlsal;
@@ -46,17 +46,25 @@
 					spouseded +=1000000;
 				}else spouseded += 0;
 
-				let NofChild = document.getElementById('nochild');
+				let NofChild = document.getElementById('nochild').value;
 				childded = 500000 * NofChild;
 
-				otherded = document.getElementById('other');
+				otherded = document.getElementById('other').value;
+				console.log(percentded);
+				console.log(parentded);
+				console.log(spouseded);
+				console.log(childded);
+				console.log(otherded);
 
-				let	toldeduction += percentded + parentded + spouseded + childded + otherded;
-				netearning += totlsal- toldeduction;// net money to pay tax 
+				let	toldeduction =  percentded + parentded + spouseded + childded + otherded;
+				console.log(toldeduction);
 
+				netearning = totlsal - toldeduction;// net money to pay tax 
+				console.log(netearning);
+				
 				//show result
 				document.getElementById('monsal').innerHTML = sal;
-				document.getElementById('totlsal').innerHTML = totlsal;
+				document.getElementById('totlsal').value = totlsal;
 				document.getElementById('pervalue').innerHTML = percentded;
 				document.getElementById('spovalue').innerHTML = spouseded;
 				document.getElementById('childvalue').innerHTML = childded;
@@ -98,16 +106,18 @@
 							paytax += netearning * 0.25;
 						}
 					}
+					console.log('hello world $paytax');
+					return paytax;
 				}
 				console.log(paytax);
 				taxeachmonth = paytax/12;
 		</script>
 		
 		
-	</title>
+
 </head>
 <body>
-	<form onsubmit="caltax()" action="" method="">
+	<form onsubmit="caltax()" action="" method="" action="">
 
 		<label>Calculation Income Tax for Staff </label><br><br>
 
