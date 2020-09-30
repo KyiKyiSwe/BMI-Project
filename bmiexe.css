@@ -2,11 +2,11 @@
 
 
 div#cal-part img{
-	width: 40%;
-	height: 50%;
+	width: 35%;
+	height: 40%;
 }
 #cal-part .show-parts{
-	line-height: 50px;
+	line-height: 30px;
 	width: 50%;
 	font-family: monotype corsiva;
 	color: blue;

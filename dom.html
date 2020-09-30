@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Intro</title>
+	<script type="text/javascript">
+	function test(){
+	let ptag=document.getElementById('ptag');//take text from ptag element
+	
+	ptag.innerHTML = ' The firs line changes'; // change ptag text
+	console.log(ptag);
+
+
+
+	//let divtag=document.querySelector('.divtag');
+	//console.log(divtag);	
+	
+	let divtag=document.querySelectorAll('.divtag');
+	console.log(divtag);
+	
+
+	divtag.innerHTM='The fourth line of divtag';
+
+	let myimage=document.getElementsByTagName('img');
+	myimage[0].src = "coffeeme2.jpg";
+	console.log(myimage);
+	
+	}
+	</script>
+</head>
+<body>
+		<p id="ptag"> The first line of paragraph </p>
+
+		<div class="divtag"> The second line for div tag</div>
+
+		<div class="divtag">The third line for div tag</div>
+
+		<img src="bmi1.png" alt="Images">
+
+		<button onclick="test()">Continue</button>
+</body>
+</html>

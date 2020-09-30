@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		<script type="text/javascript">
+			function caltax(){
+				
+				let tolsal = 0;
+				let percentded = 0;
+				let parentded = 0;
+				let spouseded = 0;
+				let childded =0;
+				let otherded = 0;
+				let netearning = 0;
+				var taxeachmonth;
+
+				let sal = parseInt(document.getElementById('s1')).value; //take data form textbox
+				//console.log(sal);
+
+				let month = parseInt(document.getElementById('s2')).value; // take month from text box
+				//console.log(month);
+
+				let totlsal = sal * month; // total salry for 12 months
+				//console.log(totlsal);
+
+				if(totlsal<=10000000){ // if your sal is less than 10000000 then 20% of sal else 20% of 10000000
+					percentded += 0.2 * totlsal;
+				}else{
+					percentded += 0.2 * 10000000;
+				}
+
+				let parent = document.getElementById('parent1').checked;
+				if (parent) {
+					parentded +=0;
+				}
+				let father = document.getElementById('parent2').checked;
+				if (father) {
+					parentded +=1000000;
+				}
+				let mother = document.getElementById ('parent3').checked;
+				if (mother) {
+					parentded += 1000000;
+				}
+				let Yspouse = document.getElementById('rd1').checked;
+				if (Yspouse) {
+					spouseded +=1000000;
+				}else spouseded += 0;
+
+				let NofChild = document.getElementById('nochild');
+				childded = 500000 * NofChild;
+
+				otherded = document.getElementById('other');
+
+				let	toldeduction += percentded + parentded + spouseded + childded + otherded;
+				netearning += totlsal- toldeduction;// net money to pay tax 
+
+				//show result
+				document.getElementById('monsal').innerHTML = sal;
+				document.getElementById('totlsal').innerHTML = totlsal;
+				document.getElementById('pervalue').innerHTML = percentded;
+				document.getElementById('spovalue').innerHTML = spouseded;
+				document.getElementById('childvalue').innerHTML = childded;
+				document.getElementById('othervalue').innerHTML = otherded;
+				document.getElementById('ttaxvalue').innerHTML = netearning;
+
+				let paytax =0;
+				
+				if (netearning<2000000) {
+					paytax += netearning * 0;
+				}else{
+						netearning = netearning - 2000000;
+						paytax += 2000000 *0;
+						if (netearning>3000000) {
+							paytax += 3000000 * 0.05;
+							netearning = netearning - 3000000; 
+						}else{
+							paytax += netearning *0.05;
+						}
+						if (netearning>5000000) {
+							paytax+= 5000000 * 0.1;
+							netearning = netearning - 5000000;
+						}else{
+							paytax += netearning * 0.1;
+						}
+						if (netearning>10000000) {
+							paytax += 10000000 * 0.15;
+							netearning = netearning - 10000000;
+						}else{
+							paytax+= netearning * 0.15;
+						}
+						if (netearning>10000000) {
+							paytax += 10000000 * 0.2;
+							netearning = netearning - 10000000;
+						}else{
+							paytax += netearning * 0.2;
+						}
+						if (netearning> 0) {
+							paytax += netearning * 0.25;
+						}
+					}
+				}
+				console.log(paytax);
+				taxeachmonth = paytax/12;
+		</script>
+		
+		
+	</title>
+</head>
+<body>
+	<form onsubmit="caltax()" action="" method="">
+
+		<label>Calculation Income Tax for Staff </label><br><br>
+
+		<label for="s1">Salary</label>
+		<input type="number" name="text1" id="s1" required=""><br><br>
+
+		<label for="s2"> Month </label>
+		<input type="number" name="text2" id="s2" value="12" readonly><br><br>
+
+<!-- total deduction -->
+		<label>Parents:</label>
+
+		<input type="checkbox" name="parent" id="parent1">
+		<label for="mo">No parents</label>
+	
+		<input type="checkbox" name="parent" id="parent2">
+		<label for="fa">Father</label>
+
+		<input type="checkbox" name="parent" id="parent3">
+		<label for="mo">Mother</label>
+
+		
+
+		<label> Spouse:</label>
+
+		<input type="radio" name="spouse" value="yes" id="rd1">Yes
+  		<input type="radio" name="spouse" value="no" id="rd2">No<br><br>
+ 		
+
+ 		<label for="child">Number of Children</label>
+ 		<input type="number" name="child" id="nochild"><br><br>
+
+ 		<label for="other"> Other Deductable: </label>
+ 		<input type="number" name="other" id="other"><br><br> 
+ 		<input type="submit" name="calculate" value="calculate">
+
+<!-- Show Result -->
+ 		<p> Monthly Salary: <strong id="monsal"></strong></p>
+ 		<p> Total Salary(12 months): <strong id="totalsal"></strong></p>
+ 		<p> Personal Relief: <strong id="pervalue"></strong></p>
+ 		<p> Parent Relief: <strong id="parvalue"></strong></p>
+ 		<p> Spouse Relief: <strong id="spovalue"></strong></p>
+ 		<p> Children relief: <strong id="childvalue"></strong></p>
+ 		<p> Other Deduction: <strong id="othervalue"></strong></p>
+ 		<p> Total Tax: <strong id="ttaxvalue"></strong></p>
+ 		<p> Monthly Tax: <strong id="monvalue"></strong></p>
+		
+	</form>
+</body>
+</html>
